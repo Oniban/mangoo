@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mess Menu - MANGO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    h1 {
+      margin: 30px 0;
+      font-size: 2.5em;
+    }
+    
+    .menu-container {
+    width: 800px;
+    margin: 40px auto;
+    }
+    
+    .menu-day {
+      max-width: 1200px;
+      margin: 30px auto;
+      background: #111;
+      color: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      font-family: system-ui;
+      background-image: url(images/81CvJNeGE8L._AC_UF894\,1000_QL80_.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .menu-day.today {
+  border: 2px solid #AFC3B4;
+  border-radius: 18px;
+  box-shadow: 0 0 30px #AFC3B4;
+    }
+  
+    
+    .menu-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      font-weight: bold;
+      font-family: 'coolfont';
+      color: #1E3A5F;
+      border-bottom: 1px solid #222;
+      font-size: 1.3em;
+    }
+    
+    .menu-header .tag {
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    
+    .today-tag {
+      color: white;
+      font-weight: 800;
+    }
+    
+    .meal-section {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 20px;
+      padding: 15px 20px;
+      border-bottom: 1px solid #222;
+      align-items: center;
+    }
+    
+    .meal-section:last-child {
+      border-bottom: none;
+    }
+    
+    .meal-title {
+      font-weight: 700;
+      color: #FFD700;
+      font-family: 'coolfont';
+      font-size: 1.1em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      text-align: left;
+    }
+    
+    .meal-items {
+      color: #FFD700;
+      font-size: 0.95em;
+      line-height: 1.6;
+      font-weight: bolder;
+      text-align: right;
+      font-family: 'coolfont';
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Mess Menu</h1>
+
+  <div id="menuContainer" class="menu-container"></div>
+
+  <script src="mess.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Schedule - MANGO</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    h1 {
+      margin: 30px 0;
+      font-size: 2.5em;
+    }
+    
+    .next-bus {
+      border: 2px solid #AFC3B4 !important;
+      box-shadow: 0 0 30px #AFC3B4 !important;
+    }
+    
+    .next-tag {
+      /* background: #AFC3B4 !important; */
+      color: #253A5A !important;
+      font-weight: 800 !important;
+      animation: pulse 2s infinite;
+    }
+    
+    
+    .content-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bus Schedule</h1>
+
+  <div id="busContainer" class="content-wrapper"></div>
+
+  <script src="bus.js"></script>
+</body>
+</html>

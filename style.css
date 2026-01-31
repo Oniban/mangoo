@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#mainContent{
+    color:#ddaf54;
+    text-align: center;
+    font-family: system-ui;
+    
+}
+@font-face {
+    font-family: 'coolfont';
+    src: url(images/GravitasOne-Regular.ttf);
+}
+body{ 
+  background-color: #F2E1BF;
+}
+
+h1{
+  color: #253A5A;
+  text-align: center;
+  font-family: 'coolfont';
+
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #FCFAE6;
+    color: #123658;
+    padding: 60px 20px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 15px;
+    font-family: 'coolfont';
+}
+
+.sidebar nav ul {
+    list-style: none;
+    font-size: large;
+    font-family: 'coolfont';
+}
+
+.sidebar nav ul li a {
+    color: #123658;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin: 8px 0;
+    right:10px;
+}
+
+.sidebar nav ul li a:hover {
+    color: #07223c;
+    background-color: #F2E1BF;
+    padding-left: 20px;
+    transform: translateX(5px);
+}
+
+/* Overlay when sidebar is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    backdrop-filter: blur(5px);
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Blur main content when sidebar is open */
+.main-content.blur {
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+.timetable-card {
+  max-width: 1800px;
+  width: 800px;
+  margin: 40px auto;
+  background: #111;
+  color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  font-family: system-ui;
+  background-image:url(images/81CvJNeGE8L._AC_UF894\,1000_QL80_.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.timetable-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-weight: bold;
+  font-family: 'coolfont';
+  color: #1E3A5F ;
+  border-bottom: 1px solid #222;
+}
+
+.timetable-header .tag {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  padding: 18px 20px;
+  border-bottom: 1px solid #222;
+  align-items: center;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.time {
+  color: #FFD700; /* Sunset Gold */
+  font-family: 'coolfont';
+  text-align: left;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Soft dark shadow */
+}
+
+.code {
+  font-weight: 600;
+  font-family: 'coolfont';
+  color:#FFD700;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.venue {
+  color: #FFD700;
+  text-align: right;
+  font-family: 'coolfont';
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.venue.lab {
+  color: #FFD700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Highlight today's timetable */
+.schedule-content.today {
+  border: 2px solid #AFC3B4;
+  border-radius: 18px;
+  box-shadow: 0 0 30px #AFC3B4;
+}
+
+/* TODAY badge */
+.today-badge {
+  margin-left: auto;
+  color: #213B59;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.schedule-content {
+  position: relative;
+}
+
+/* TODAY tag styling */
+.tag.today-tag {
+  color: #213B59;
+  font-weight: 800;
+  box-shadow: 0 0 10px rgba(175, 195, 180, 0.8);
+}
+
+/* ===== LEFT DOCK (UBUNTU STYLE) ===== */
+.dock {
+  position: fixed;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  background: #F2E1BF;
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  z-index: 1100;
+}
+
+.dock-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: none;
+  background: #7BAAA1;
+  color: #f82020;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.dock-btn:hover {
+  background: rgba(255,255,255,0.35);
+  transform: scale(1.12);
+}
+
+/* Hide old hamburger animation behavior */
+.hamburger.active {
+  opacity: 1;
+}
+
+.dock-btn img {
+  width: 24px;
+  height: 35px;
+  align-items: center;
+  object-fit: contain;
+  pointer-events: none; /* click goes to button */
+}
+
+/* Hide dock when sidebar is open */
+.dock.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(-100px);
+  transition: all 0.3s ease;
+}
