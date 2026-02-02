@@ -16,16 +16,45 @@
       font-size: 2.5em;
     }
     
+    /* Override row grid to make route text appear at far right */
+    .row {
+      grid-template-columns: 150px 1fr auto !important;
+    }
+    
+    /* Override code class to be right-aligned for bus schedule */
+    .code {
+      text-align: right !important;
+      padding-right: 0 !important;
+    }
+    
+    /* Center align ONLY the next bus route */
+    .next-bus-route {
+      text-align: center !important;
+    }
+    
     .next-bus {
       border: 2px solid #AFC3B4 !important;
-      box-shadow: 0 0 30px #AFC3B4 !important;
+      box-shadow: 0 0 40px rgba(175, 195, 180, 0.9), 0 10px 30px rgba(0,0,0,0.6) !important;
     }
     
     .next-tag {
-      /* background: #AFC3B4 !important; */
+      background: #AFC3B4 !important;
       color: #253A5A !important;
       font-weight: 800 !important;
+      font-size: 16px !important;
+      padding: 8px 16px !important;
+      box-shadow: 0 0 20px rgba(175, 195, 180, 0.8) !important;
       animation: pulse 2s infinite;
+      display: inline-block;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(175, 195, 180, 0.8);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(175, 195, 180, 1);
+      }
     }
     
     
