@@ -866,13 +866,12 @@ document.addEventListener("DOMContentLoaded", () => {
     card.innerHTML = `
       <div class="timetable-header">
         <span class="day">${b.bus}</span>
-        <span class="tag ${index === 0 ? 'next-tag' : ''}">${index === 0 ? 'NEXT BUS' : 'AVAILABLE'}</span>
       </div>
 
       <div class="row">
         <span class="time">${formatTime12h(b.time)}</span>
-        <span class="code">${b.from} → ${b.to}</span>
-        <span class="venue">Weekday</span>
+        <span class="code ${index === 0 ? 'next-bus-route' : ''}">${b.from} → ${b.to}</span>
+        <span class="venue">${index === 0 ? '<span class="tag next-tag">NEXT BUS</span>' : ''}</span>
       </div>
     `;
 
