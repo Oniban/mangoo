@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Pen barrel -->
+  <rect x="36" y="8" width="20" height="55" rx="6"
+        fill="#7BAAA1" stroke="#1E3A5F" stroke-width="3"/>
+
+  <!-- Pen top cap ridge -->
+  <rect x="36" y="8" width="20" height="10" rx="5"
+        fill="#253A5A" stroke="#1E3A5F" stroke-width="2.5"/>
+
+  <!-- Pen clip -->
+  <rect x="52" y="6" width="5" height="42" rx="2.5"
+        fill="#253A5A" stroke="#1E3A5F" stroke-width="1.5"/>
+  <circle cx="54.5" cy="48" r="4" fill="#253A5A" stroke="#1E3A5F" stroke-width="1.5"/>
+
+  <!-- Grip section -->
+  <rect x="36" y="52" width="20" height="12" rx="2"
+        fill="#253A5A" stroke="#1E3A5F" stroke-width="2"/>
+
+  <!-- Nib base -->
+  <polygon points="36,64 56,64 50,78 42,78"
+           fill="#AFC3B4" stroke="#1E3A5F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Nib tip -->
+  <polygon points="42,78 50,78 46,94"
+           fill="#FFD700" stroke="#1E3A5F" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Nib slit -->
+  <line x1="46" y1="78" x2="46" y2="94" stroke="#1E3A5F" stroke-width="1.5"/>
+</svg>
