@@ -1,15 +1,13 @@
-// ================= SIDEBAR LOGIC =================
+// ==================== SIDEBAR LOGIC ====================
 const hamburger = document.getElementById('hamburgerBtn');
 const sidebar = document.getElementById('sidebar');
 const mainContent = document.getElementById('mainContent');
 const dock = document.querySelector('.dock');
 
-// Create overlay
 const overlay = document.createElement('div');
 overlay.classList.add('overlay');
 document.body.appendChild(overlay);
 
-// Toggle sidebar
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   sidebar.classList.toggle('active');
@@ -18,13 +16,8 @@ hamburger.addEventListener('click', () => {
   dock.classList.toggle('hidden');
 });
 
-// Close sidebar on overlay click
 overlay.addEventListener('click', closeSidebar);
-
-// Close sidebar on Escape
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeSidebar();
-});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSidebar(); });
 
 function closeSidebar() {
   hamburger.classList.remove('active');
@@ -34,40 +27,106 @@ function closeSidebar() {
   dock.classList.remove('hidden');
 }
 
-// Close sidebar when clicking a link
-sidebar.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', closeSidebar);
+sidebar.querySelectorAll('a').forEach(link => link.addEventListener('click', closeSidebar));
+
+
+const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const DAY_LABELS = {
+  Monday: 'MONDAY',
+  Tuesday: 'TUESDAY',
+  Wednesday: 'WEDNESDAY',
+  Thursday: 'THURSDAY',
+  Friday: 'FRIDAY',
+  Saturday: 'SATURDAY'
+};
+
+function buildTimetableHTML(groupNum) {
+  const schedule = GROUP_TIMETABLE[groupNum];
+  const todayIdx = new Date().getDay();
+  const container = document.getElementById('timetableContainer');
+  container.innerHTML = '';
+
+  DAYS.forEach((day, i) => {
+    const dayNum = i + 1;
+    const isToday = (dayNum === todayIdx);
+    let slots = (schedule && schedule[day]) ? [...schedule[day]] : [];
+
+    if (day === "Saturday") {
+      const extra = JSON.parse(localStorage.getItem('mango_saturday') || '[]');
+      slots = extra;
+    }
+
+    const card = document.createElement('div');
+    card.className = 'timetable-card schedule-content';
+    if (isToday) card.classList.add('today');
+
+    let rowsHTML = '';
+
+    if (slots.length === 0) {
+      rowsHTML = '<div class="no-class">— No classes scheduled —</div>';
+    } else {
+      slots.forEach(slot => {
+        rowsHTML += `
+          <div class="row">
+            <span class="time">${slot.time}</span>
+            <span class="code">${slot.course}</span>
+            <span class="venue">${slot.venue}</span>
+          </div>`;
+      });
+    }
+
+    card.innerHTML = `
+      <div class="timetable-header">
+        <span class="day">${DAY_LABELS[day]}</span>
+        ${isToday ? '<span class="tag today-tag">TODAY</span>' : ''}
+      </div>
+      ${rowsHTML}`;
+
+    container.appendChild(card);
+  });
+}
+
+const rollInput = document.getElementById('rollInput');
+const searchBtn = document.getElementById('searchBtn');
+
+searchBtn.addEventListener('click', () => {
+  const roll = rollInput.value.trim().toUpperCase();
+  const groupNum = ROLL_TO_GROUP[roll];
+  if (!groupNum) return alert("Invalid Roll Number");
+  localStorage.setItem('mango_roll', roll);
+  buildTimetableHTML(groupNum);
 });
 
-// ================= TIMETABLE (TODAY LOGIC) =================
-document.addEventListener("DOMContentLoaded", () => {
-  const today = new Date().getDay(); // 0 = Sunday
-  const blocks = document.querySelectorAll(".schedule-content");
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('mango_roll');
+  if (saved) {
+    rollInput.value = saved;
+    buildTimetableHTML(ROLL_TO_GROUP[saved]);
+  }
+});
 
-  if (!blocks.length) return;
+const addSatBtn = document.getElementById('addSatBtn');
+const removeSatBtn = document.getElementById('removeSatBtn');
 
-  blocks.forEach(block => {
-    const day = Number(block.dataset.day);
+addSatBtn.addEventListener('click', () => {
+  const time = prompt("Enter Time (e.g. 9:00 AM - 10:00 AM)");
+  if (!time) return;
 
-    if (day === today) {
-      // highlight the card
-      block.classList.add("today");
+  const subject = prompt("Enter Subject Name");
+  if (!subject) return;
 
-      // find existing tag (WEEKDAY / WEEKEND)
-      const tag = block.querySelector(".tag");
+  const venue = prompt("Enter Venue");
+  if (!venue) return;
 
-      if (tag) {
-        tag.textContent = "TODAY";
-        tag.classList.add("today-tag");
-      }
+  const saturdayClasses = JSON.parse(localStorage.getItem('mango_saturday') || '[]');
 
-      // scroll into view
-      setTimeout(() => {
-        block.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-      }, 300);
-    }
-  });
+  saturdayClasses.push({ time, course: subject, venue });
+
+  localStorage.setItem('mango_saturday', JSON.stringify(saturdayClasses));
+  location.reload();
+});
+
+removeSatBtn.addEventListener('click', () => {
+  localStorage.removeItem('mango_saturday');
+  location.reload();
 });
