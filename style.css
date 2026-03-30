@@ -124,7 +124,7 @@ h1{
   background-image: url(images/81CvJNeGE8L._AC_UF894\,1000_QL80_.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
   filter: blur(4px);
   z-index: 0;
 }
