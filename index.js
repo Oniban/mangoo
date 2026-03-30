@@ -97,6 +97,12 @@ searchBtn.addEventListener('click', () => {
   buildTimetableHTML(groupNum);
 });
 
+rollInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    searchBtn.click();
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('mango_roll');
   if (saved) {

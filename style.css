@@ -101,9 +101,9 @@ h1{
 }
 
 .timetable-card {
-  max-width: 1800px;
-  width: 800px;
-  margin: 40px auto;
+  max-width: 800px;
+  width: 92vw;
+  margin: 24px auto;
   background: #111;
   color: white;
   border-radius: 16px;
@@ -150,11 +150,13 @@ h1{
 .row {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
-  padding: 18px 20px;
+  padding: 12px 14px;
   border-bottom: 1px solid #222;
   align-items: center;
   position: relative;
   z-index: 1;
+  font-size: 0.9em;
+  word-break: break-word;
 }
 
 .row:last-child {
@@ -275,6 +277,67 @@ h1{
 .dock.hidden {
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-50%) translateX(-100px);
   transition: all 0.3s ease;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 600px) {
+  /* Move dock to bottom center on mobile */
+  .dock {
+    top: auto;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    flex-direction: row;
+    border-radius: 20px;
+    padding: 8px 14px;
+    gap: 16px;
+  }
+
+  .dock.hidden {
+    transform: translateX(-50%) translateY(100px);
+  }
+
+  /* Add bottom padding so dock doesn't overlap content */
+  body {
+    padding-bottom: 90px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+    margin-top: 10px;
+  }
+
+  .timetable-header {
+    padding: 14px;
+    font-size: 0.9em;
+  }
+
+  .row {
+    grid-template-columns: 1.3fr 1fr 0.9fr;
+    padding: 10px 10px;
+    font-size: 0.78em;
+    gap: 4px;
+  }
+
+  .time, .code, .venue {
+    font-size: 0.85em;
+  }
+
+  .no-class {
+    padding: 16px;
+    font-size: 0.85em;
+    text-align: center;
+    color: #aaa;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .row {
+    grid-template-columns: 1.4fr 0.9fr 0.9fr;
+    font-size: 0.72em;
+    padding: 8px 8px;
+  }
 }
