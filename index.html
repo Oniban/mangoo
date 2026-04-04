@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MANGO</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="icon" type="image/x-icon" href="images/logo icon.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANGO</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="search.css">
+<link rel="icon" type="image/x-icon" href="images/logo icon.jpg">
 </head>
 <body>
-  <div class="main-content" id="mainContent">
-    <h1>M A N G O</h1>
-    <div class="search-section">
-      <div class="search-wrapper">
-        <input type="text" id="rollInput" placeholder="Enter Roll Number (e.g. 2501ME63)" autocomplete="off">
-        <button id="searchBtn">VIEW SCHEDULE</button>
+
+<!-- ── FIX 3: rollInput exists in DOM before ANY script runs,
+     so index.js's  const rollInput = getElementById('rollInput')
+     never returns null ─────────────────────────────────────── -->
+<input type="hidden" id="rollInput" value="">
+
+<div class="main-content" id="mainContent">
+  <h1>M A N G O</h1>
+
+  <div class="search-section">
+    <div class="search-wrapper">
+      <div class="autocomplete-container">
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Type your name or roll number…"
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <div id="autocompleteDropdown"></div>
       </div>
-    </div>
-    <div class="content-wrapper" id="timetableContainer"></div>
-    <div class="sat-controls">
-      <button id="addSatBtn" class="sat-btn">➕ Add Saturday Class</button>
-      <button id="removeSatBtn" class="sat-btn remove">➖ Remove Saturday Schedule</button>
+      <button id="searchBtn">VIEW SCHEDULE</button>
     </div>
   </div>
 
-  <div class="dock">
-    <button class="dock-btn" id="hamburgerBtn" title="Study Material">
-      <img src="images/bookk.png">
-    </button>
-    <button class="dock-btn" title="Bus Schedule" onclick="window.open('bus.html','_blank')">
-      <img src="images/bus icon.png" alt="Menu">
-    </button>
-    <button class="dock-btn" title="Mess Schedule" onclick="window.open('mess.html','_blank')">
-      <img src="images/fooood.png">
-    </button>
-    <!-- <button class="dock-btn" title="Room Checker" onclick="window.open('exam.html','_blank')" style="background:#7BAAA1; font-size:20px; color:#1E3A5F; font-weight:bold;">
-      <img src="images/room-icon (1).svg">
-    </button> -->
-  </div>
+  <div class="content-wrapper" id="timetableContainer"></div>
 
-  <div class="sidebar" id="sidebar">
-    <div class="sidebar-content">
-      <h2>Resources</h2>
-      <nav>
-        <ul>
-          <li><a href="https://cciitpatna-my.sharepoint.com/:f:/g/personal/sushmitha_iitp_ac_in/IgBiT1AJnHlARrwlKaHjjnKwAUq9PtGAo2HktKlLHIsvs8k?e=iQgxHE" target="_blank">Maths</a></li>
-          <li><a href="images/Chemistry Notes.pdf" target="_blank">Chemistry</a></li>
-          <li><a href="https://cciitpatna.sharepoint.com/sites/ME1202G1-6/Class%20Materials" target="_blank">Mechanics</a></li>
-          <li><a href="http://172.30.1.9/~samrat/2026/CS1201/" target="_blank">CS</a></li>
-          <li><a href="end.html" target="_blank">EndSem</a></li>
-        </ul>
-      </nav>
-    </div>
+  <div class="sat-controls">
+    <button id="addSatBtn"    class="sat-btn">&#10133; Add Saturday Class</button>
+    <button id="removeSatBtn" class="sat-btn remove">&#10134; Remove Saturday Schedule</button>
   </div>
+</div>
 
-  <script src="timetable-data.js"></script>
-  <script src="index.js"></script>
+<div class="dock">
+  <button class="dock-btn" id="hamburgerBtn" title="Study Material">
+    <img src="images/bookk.png" alt="Books">
+  </button>
+  <button class="dock-btn" title="Bus Schedule" onclick="window.open('bus.html','_blank')">
+    <img src="images/bus icon.png" alt="Bus">
+  </button>
+  <button class="dock-btn" title="Mess Schedule" onclick="window.open('mess.html','_blank')">
+    <img src="images/fooood.png" alt="Food">
+  </button>
+</div>
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-content">
+    <h2>Resources</h2>
+    <nav>
+      <ul>
+        <li><a href="https://cciitpatna-my.sharepoint.com/:f:/g/personal/sushmitha_iitp_ac_in/IgBiT1AJnHlARrwlKaHjjnKwAUq9PtGAo2HktKlLHIsvs8k?e=iQgxHE" target="_blank">Maths</a></li>
+        <li><a href="images/Chemistry Notes.pdf" target="_blank">Chemistry</a></li>
+        <li><a href="https://cciitpatna.sharepoint.com/sites/ME1202G1-6/Class%20Materials" target="_blank">Mechanics</a></li>
+        <li><a href="http://172.30.1.9/~samrat/2026/CS1201/" target="_blank">CS</a></li>
+        <li><a href="https://cciitpatna-my.sharepoint.com/:x:/g/personal/pic_cetc_iitp_ac_in/IQDX0b67PeFgS6NiWC7wgUQ2ASqzy0UyM7rsjQedhGGKk1A?e=halpNf" target="_blank">EndSem</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<!-- Data first, then logic -->
+<script src="students-data.js"></script>
+<script src="timetable-data.js"></script>
+<script src="search.js"></script>
+<script src="index.js"></script>
+
 </body>
 </html>
