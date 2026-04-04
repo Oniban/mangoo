@@ -45,7 +45,7 @@ h1{
     #5f7f96 50%    /* soft blue */
   );
     
-    color: #123658;
+    color: #ddaf54;;
     padding: 60px 20px 20px;
     transition: left 0.3s ease;
     z-index: 1000;
@@ -59,7 +59,7 @@ h1{
 .sidebar h2 {
     margin-bottom: 30px;
     font-size: 24px;
-    border-bottom: 2px solid #555;
+    border-bottom: 2px solid #ddaf54;;
     padding-bottom: 15px;
     font-family: 'coolfont';
 }
@@ -71,7 +71,7 @@ h1{
 }
 
 .sidebar nav ul li a {
-    color: #123658;
+    color: #ddaf54;
     text-decoration: none;
     font-size: 16px;
     transition: all 0.3s ease;
