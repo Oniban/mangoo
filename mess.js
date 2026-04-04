@@ -1,174 +1,120 @@
-// Mess menu data
 const menuData = [
   {
-    "Day": "Monday",
-    "Breakfast": "Aloo Paratha + Red & Green Chutney",
-    "Lunch": "Phool Gobhi + Rajma + Plain Rice + Fryums + Roti",
-    "Snacks": "Samosa + Chutney",
-    "Dinner": "Butter Paneer Masala / Butter Chicken + Dal Fry + Plain Rice + Roti",
-    "Dessert": "Custard / Sewai Kheer"
+    Day: "Monday",
+    Breakfast: "Aloo Paratha + Green Chutney + Tomato Sauce + Curd",
+    Lunch: "Sev Tamatar Sabji + Chana Dal + Plain Rice + Fryums + Roti",
+    Snacks: "Samosa + Chutney + Tea",
+    Dinner: "Paneer Tikka Masala / Butter Chicken + Dal Fry + Plain Rice + Roti",
+    Dessert: "Custard"
   },
   {
-    "Day": "Tuesday",
-    "Breakfast": "Palak Poori + Aloo Curry",
-    "Lunch": "Mix Veg + Dal Tadka + Jeera Rice + Papad + Roti",
-    "Snacks": "Bhel Puri",
-    "Dinner": "Aloo Soya + Dal Makhani + Roti + Fried Rice",
-    "Dessert": "Gulab Jamun"
+    Day: "Tuesday",
+    Breakfast: "Poori + Aloo Dry + Jalebi + Egg Bhurji",
+    Lunch: "Seasonal Sabji + Pyaz Pakoda + Chana Dal + Jeera Rice + Papad + Roti",
+    Snacks: "Peri Peri Fries + Coffee",
+    Dinner: "Gatte ki Sabji + Chana Dal + Tomato Rice + Roti + Fryums",
+    Dessert: "Gulab Jamun"
   },
   {
-    "Day": "Wednesday",
-    "Breakfast": "Poha + Jalebi + Namkeen (Sev)",
-    "Lunch": "Kadhi + Mix Dal + Plain Rice + Aloo Bhujia + Fryums + Roti",
-    "Snacks": "Pasta",
-    "Dinner": "Chilli Paneer / Chilli Chicken + Jeera Rice + Roti",
-    "Dessert": ""
+    Day: "Wednesday",
+    Breakfast: "Masala Upma + Chutney + Sambar + Sprouts Chaat",
+    Lunch: "Kadhi + Mix Dal + Rice + Aloo Bhujia + Fryums + Roti",
+    Snacks: "Pyaaz Kachori + Tea",
+    Dinner: "Paneer Lababdar / Kolhapuri Chicken / Chilli Chicken + Jeera Rice + Roti + Dal",
+    Dessert: ""
   },
   {
-    "Day": "Thursday",
-    "Breakfast": "Plain Poori + Dry Aloo Sabzi",
-    "Lunch": "Dum Aloo + Dal Tadka + Fried Rice + Roti + Papad",
-    "Snacks": "Spring Roll",
-    "Dinner": "Mix Veg + Rajma + Plain Rice + Papad + Roti",
-    "Dessert": "Gajar Halwa / Rasgulla"
+    Day: "Thursday",
+    Breakfast: "Mix Veg Paratha + Red & Green Chutney",
+    Lunch: "Chole + Methi Matar Malai + Papad + Rice + Roti",
+    Snacks: "Spring Roll + Coffee",
+    Dinner: "Dry Manchurian + Aloo Soyabean + Dal Tadka + Roti + Fried Rice",
+    Dessert: "Rabdi Jalebi"
   },
   {
-    "Day": "Friday",
-    "Breakfast": "Uttapam + Vada + Sambar & Chutney",
-    "Lunch": "Chole + Methi Matar Malai + Fryums + Plain Rice + Roti",
-    "Snacks": "Bread Pakoda",
-    "Dinner": "Kadhai Paneer / Kadhai Chicken + Plain Rice + Roti",
-    "Dessert": "Kheer"
+    Day: "Friday",
+    Breakfast: "Vada + Uttapam + Masala Idli + Sambar & Chutney",
+    Lunch: "Dum Aloo + Dal Tadka + Fried Rice + Roti + Fryums",
+    Snacks: "Bread Pakoda + Tea",
+    Dinner: "Butter Paneer Masala / Hyderabadi Chicken / Kadhai Chicken + Rice + Roti + Dal",
+    Dessert: "Ras Malai"
   },
   {
-    "Day": "Saturday",
-    "Breakfast": "Sandwich + Green Chutney + Ketchup",
-    "Lunch": "Noodles + Manchurian + Fried Rice + Dal",
-    "Snacks": "Golgappe",
-    "Dinner": "Malai Kofta + Egg Curry + Plain Rice + Roti",
-    "Dessert": "Boondi"
+    Day: "Saturday",
+    Breakfast: "Sandwich + Chutney + Ketchup + Sprouts Chaat",
+    Lunch: "Lauki Chana + Rajma + Rice + Roti + Papad",
+    Snacks: "Golgappe + Coffee",
+    Dinner: "Malai Kofta + Egg Curry + Rice + Roti + Dal",
+    Dessert: "Shahi Tukda / Balushahi"
   },
   {
-    "Day": "Sunday",
-    "Breakfast": "Masala Dosa + Sambar & Chutney",
-    "Lunch": "Chole Bhature + Dal + Fry + Jeera Rice + Boondi Raita",
-    "Snacks": "Maggi",
-    "Dinner": "Chicken & Veg Biryani + Raita + Gravy",
-    "Dessert": "Shahi Tukda"
+    Day: "Sunday",
+    Breakfast: "Masala Dosa + Sambar & Chutney",
+    Lunch: "Chole Bhature + Dal Fry + Jeera Rice + Boondi Raita",
+    Snacks: "Punugulu + Peanut Chutney + Tea",
+    Dinner: "Chicken & Veg Biryani + Raita + Gravy",
+    Dessert: "Ice Cream"
   },
   {
-    "Day": "Everyday",
-    "Breakfast": "Bread + Butter + Jam + Ketchup + Tea + Milk + Coffee",
-    "Lunch": "Salad + Pickle",
-    "Snacks": "Tea / Coffee + Toast",
-    "Dinner": "Salad + Pickle",
-    "Dessert": ""
+    Day: "Everyday",
+    Breakfast: "Milk + Bread + Butter + Jam + Tea + Cornflakes + Egg + Fruits",
+    Lunch: "Salad + Pickle",
+    Snacks: "Toast",
+    Dinner: "Salad + Pickle",
+    Dessert: ""
   }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("menuContainer");
-  
-  // Get current day (1=Monday, 7=Sunday)
+
   const today = new Date().getDay();
   const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const todayName = dayNames[today];
-  
-  // Find today's menu and everyday menu
+
   let todayMenu = null;
   let everydayMenu = null;
-  const otherDays = [];
-  
+
   menuData.forEach(day => {
-    if (day.Day === todayName) {
-      todayMenu = day;
-    } else if (day.Day === "Everyday") {
-      everydayMenu = day;
-    } else {
-      otherDays.push(day);
+    if (day.Day === todayName) todayMenu = day;
+    if (day.Day === "Everyday") everydayMenu = day;
+  });
+
+  if (todayMenu) renderDay(todayMenu, true);
+  if (everydayMenu) renderDay(everydayMenu, false);
+
+  menuData.forEach(day => {
+    if (day.Day !== todayName && day.Day !== "Everyday") {
+      renderDay(day, false);
     }
   });
-  
-  // Render today's menu first (highlighted)
-  if (todayMenu) {
-    renderDay(todayMenu, true, false);
-  }
-  
-  // Render everyday menu
-  if (everydayMenu) {
-    renderDay(everydayMenu, false, true);
-  }
-  
-  // Render other days in order
-  const dayOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-  dayOrder.forEach(dayName => {
-    if (dayName !== todayName) {
-      const day = menuData.find(d => d.Day === dayName);
-      if (day) {
-        renderDay(day, false, false);
-      }
-    }
-  });
-  
-  function renderDay(day, isToday, isEveryday) {
+
+  function renderDay(day, isToday) {
     const card = document.createElement("div");
     card.className = "menu-day";
-    
-    if (isToday) {
-      card.classList.add("today");
-    }
-    if (isEveryday) {
-      card.classList.add("everyday");
-    }
-    
-    let tagHTML = '';
-    if (isToday) {
-      tagHTML = '<span class="tag today-tag">TODAY</span>';
-    } else if (isEveryday) {
-      tagHTML = '<span class="tag everyday-tag">EVERYDAY</span>';
-    } else {
-      tagHTML = '<span class="tag">WEEKDAY</span>';
-    }
-    
-    let sectionsHTML = '';
-    const meals = [
-      { title: 'Breakfast', key: 'Breakfast' },
-      { title: 'Lunch', key: 'Lunch' },
-      { title: 'Snacks', key: 'Snacks' },
-      { title: 'Dinner', key: 'Dinner' },
-      { title: 'Dessert', key: 'Dessert' }
-    ];
-    
-    meals.forEach(meal => {
-      const items = day[meal.key];
-      if (items && items !== '' && items !== 'nan') {
-        sectionsHTML += `
+    if (isToday) card.classList.add("today");
+
+    let sections = "";
+
+    ["Breakfast", "Lunch", "Snacks", "Dinner", "Dessert"].forEach(meal => {
+      if (day[meal]) {
+        sections += `
           <div class="meal-section">
-            <div class="meal-title">${meal.title}</div>
-            <div class="meal-items">${items}</div>
+            <div class="meal-title">${meal}</div>
+            <div class="meal-items">${day[meal]}</div>
           </div>
         `;
       }
     });
-    
+
     card.innerHTML = `
       <div class="menu-header">
-        <span class="day">${day.Day}</span>
-        ${tagHTML}
+        <span>${day.Day}</span>
+        ${isToday ? '<span class="tag today-tag">TODAY</span>' : ''}
       </div>
-      ${sectionsHTML}
+      ${sections}
     `;
-    
+
     container.appendChild(card);
-    
-    // Scroll today's menu into view
-    if (isToday) {
-      setTimeout(() => {
-        card.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-      }, 300);
-    }
   }
 });

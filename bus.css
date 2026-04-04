@@ -1,0 +1,110 @@
+/* ─── Bus Page Layout ─────────────────────────────────────── */
+
+body {
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #3b4454 0%,     /* dark bluish grey */
+    #4f5d73 25%,    /* muted blue */
+    #5f7f96 50%,    /* soft blue */
+    #5fa6a1 75%,    /* teal */
+    #7ec8a3 100%    /* greenish */
+  );
+}
+
+h1 {
+  margin: 30px 0;
+  font-size: 2.5em;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ─── Row layout: time | bus name | route ─────────────────── */
+
+.row {
+  grid-template-columns: 110px 130px 1fr !important;
+  align-items: center;
+}
+
+.content-wrapper{
+  a{
+    color: #FFD700;
+    text-decoration: none;
+  }
+  text-align: center;
+}
+
+
+/* Bus name column — centered */
+.code {
+  text-align: center !important;
+  padding-right: 0 !important;
+  color: #AFC3B4 !important;
+  font-size: 0.88em !important;
+}
+
+/* Route column — right-aligned */
+.venue.bus-route {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ─── Current-hour card highlight ─────────────────────────── */
+
+.current-hour-card {
+  border: 2px solid #AFC3B4 !important;
+  box-shadow: 0 0 35px rgba(175, 195, 180, 0.6), 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* ─── Next Bus row highlight ──────────────────────────────── */
+
+.next-bus-row {
+  background: rgba(175, 195, 180, 0.08) !important;
+  border-radius: 8px;
+}
+
+.next-bus-row .time {
+  color: #FFD700 !important;
+  font-weight: bold;
+}
+
+/* ─── NEXT badge ──────────────────────────────────────────── */
+
+.next-tag {
+  background: hsl(135, 14%, 73%) !important;
+  color: #253A5A !important;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  padding: 4px 12px !important;
+  border-radius: 6px;
+  box-shadow: 0 0 16px rgba(175, 195, 180, 0.8) !important;
+  animation: pulse 2s infinite;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 16px rgba(175, 195, 180, 0.7); }
+  50%       { box-shadow: 0 0 28px rgba(175, 195, 180, 1); }
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 80px 100px 1fr !important;
+  }
+
+  .venue.bus-route {
+    font-size: 0.82em;
+    gap: 6px;
+  }
+}

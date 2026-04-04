@@ -1,0 +1,129 @@
+/* ─── Search Section ─────────────────────────────────────── */
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px auto 8px;
+  gap: 8px;
+}
+
+.search-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #111;
+  border-radius: 16px;
+  padding: 14px 18px;
+  max-width: min(800px, 92vw);
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.search-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(images/joji.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.search-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+#rollInput {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1.5px solid rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+  color: #FFD700;
+  font-family: 'coolfont';
+  font-size: 1.05em;
+  padding: 10px 16px;
+  outline: none;
+  letter-spacing: 0.05em;
+}
+
+#searchBtn {
+  background: #AFC3B4;
+  color: #1E3A5F;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 22px;
+  font-family: 'coolfont';
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .search-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  #rollInput {
+    width: 100%;
+    font-size: 1em;
+    padding: 12px 14px;
+    text-align: center;
+  }
+
+  #searchBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+  }
+}
+
+/* ─── Saturday Controls ───────────────────────────────────── */
+
+.sat-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 30px 16px 70px;
+  padding: 0 8px;
+}
+
+.sat-btn {
+  background: #AFC3B4;
+  color: #1E3A5F;
+  border: none;
+  padding: 12px 20px;
+  font-family: 'coolfont';
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex: 1 1 auto;
+  min-width: 160px;
+  max-width: 260px;
+  text-align: center;
+}
+
+.sat-btn:hover {
+  background: #FFD700;
+  transform: scale(1.05);
+}
+
+.sat-btn.remove {
+  background: #e74c3c;
+  color: white;
+}
+
+.sat-btn.remove:hover {
+  background: #c0392b;
+}
