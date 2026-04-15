@@ -1,257 +1,161 @@
 # 🥭 MANGO
+### *My Academic Navigation & General Organizer*
 
-> **M**y **A**cademic **N**avigation & **G**eneral **O**rganizer
+> A sleek, zero-dependency web app built for **IIT Patna** students — check your class schedule, today's mess menu, and the next bus, all in one place.
 
-A sleek, student-designed web application for IIT Patna students to track class schedules, mess menus, and bus timings - all in one beautiful interface.
-
-![MANGO Banner](https://img.shields.io/badge/Made%20with-Love%20%26%20Code-FF6B6B?style=for-the-badge)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-mangoo--two.vercel.app-brightgreen?style=for-the-badge)](https://mangoo-two.vercel.app)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
 
-## ✨ Features
+## ✨ What is MANGO?
 
-### 📚 **Class Timetable**
-- **Auto-highlights today's schedule** with a glowing accent
-- Clean, card-based layout for each day of the week
-- Automatically scrolls to today's classes on page load
-- Lab sessions marked distinctly for easy identification
-
-### 🍽️ **Mess Menu**
-- Complete weekly mess menu with daily meals
-- **Today's menu highlighted** for quick reference
-- Organized by meal type: Breakfast, Lunch, Snacks, Dinner, Dessert
-- Beautiful card design with blurred background effects
-
-### 🚌 **Bus Schedule**
-- Real-time bus timings from current time onwards
-- **Next bus highlighted** with special styling
-- Shows all bus routes: Aryabhatta ↔ Tut Block ↔ D Quarters
-- 12-hour time format for easy reading
-
-### 🎨 **Design Highlights**
-- **Sunset-themed color palette** with warm golds and deep blues
-- **Ubuntu-style dock** for quick navigation
-- **Glassmorphism effects** and blurred backgrounds
-- **Smooth animations** and transitions throughout
-- **Responsive sidebar** with study material links
-- Custom typography using "Gravitas One" font
+MANGO is a lightweight, beautifully designed college utility website. No logins, no frameworks, no fuss — just open it and get the information you need. Enter your roll number to pull up your personal timetable, glance at today's mess menu, or check when the next campus bus departs.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Features
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/mango.git
-   cd mango
-   ```
+### 📚 Class Timetable
+- Enter your **roll number** to load your personal schedule
+- Today's classes are **auto-highlighted** and scrolled into view
+- Lab sessions are visually distinct from regular lectures
+- Add or remove Saturday classes on the fly
 
-2. **Open in browser**
-   ```bash
-   # Simply open index.html in your browser
-   open index.html
-   # or
-   start index.html
-   ```
+### 🍽️ Mess Menu
+- Full weekly menu broken down by meal: Breakfast, Lunch, Snacks, Dinner & Dessert
+- Today's meals are automatically highlighted
+- Clean card layout with glassmorphism effects
 
-3. **Enjoy!** 🎉
+### 🚌 Bus Schedule
+- Shows upcoming bus timings from **right now**
+- The **next bus is highlighted** so you never have to scan the whole list
+- Covers all routes: Aryabhatta ↔ Tut Block ↔ D Quarters
+- 12-hour time format for easy reading
+
+### 🎨 Design
+- Warm sunset-inspired colour palette (cream, deep navy, sage green, gold)
+- Ubuntu-style dock for quick navigation between pages
+- Glassmorphism card effects and smooth CSS transitions
+- Custom *Gravitas One* typography for headers
+- Fully responsive layout
 
 ---
 
 ## 📂 Project Structure
 
 ```
-mango/
+mangoo/
+├── index.html          # Timetable page (roll-number lookup)
+├── bus.html            # Bus schedule
+├── mess.html           # Mess menu
+├── exam.html           # Exam room checker (in progress)
 │
-├── index.html          # Main timetable page
-├── bus.html            # Bus schedule page
-├── mess.html           # Mess menu page
-│
-├── index.js            # Timetable & sidebar logic
+├── index.js            # Timetable rendering & sidebar logic
 ├── bus.js              # Bus schedule logic (137 trips!)
 ├── mess.js             # Mess menu logic
+├── timetable-data.js   # All timetable data by roll number
 │
-├── style.css           # Global styles
+├── style.css           # Global styles & theming
 │
-└── images/             # Icons and background images
-    ├── bookk.png
-    ├── bus icon.png
-    ├── fooood.png
-    └── 81CvJNeGE8L._AC_UF894,1000_QL80_.jpg
+└── images/             # Icons and background assets
 ```
 
 ---
 
-## 🎯 Key Components
+## 🛠️ Getting Started
 
-### Sidebar Navigation
-Access important study materials with one click:
-- Mathematics resources
-- Chemistry notes
-- Mechanics materials
-- CS course content
+No build step, no package manager — just a browser.
 
-### Smart Highlighting
-The app automatically detects the current day and:
-- Highlights today's timetable card
-- Changes the tag from "WEEKDAY" to "TODAY"
-- Scrolls to the relevant section
-- Applies special glow effects
+```bash
+# 1. Clone the repo
+git clone https://github.com/Oniban/mangoo.git
+cd mangoo
 
-### Dock Interface
-Quick-access buttons for:
-- 📖 Study Materials (opens sidebar)
-- 🚌 Bus Schedule
-- 🍽️ Mess Menu
-
----
-
-## 🛠️ Technologies Used
-
-- **Pure HTML5** - Semantic markup
-- **CSS3** - Advanced styling with CSS Grid, Flexbox, and custom animations
-- **Vanilla JavaScript** - No frameworks, just clean ES6+
-- **Custom Fonts** - Gravitas One for headers
-- **CSS Variables** - For consistent theming
-
----
-
-## 🎨 Color Palette
-
-```css
-Background:   #F2E1BF  /* Warm cream */
-Primary:      #253A5A  /* Deep navy */
-Accent:       #AFC3B4  /* Sage green */
-Highlight:    #FFD700  /* Sunset gold */
-Cards:        #111111  /* Rich black */
+# 2. Open in your browser
+open index.html      # macOS
+start index.html     # Windows
+xdg-open index.html  # Linux
 ```
 
----
-
-## ⚡ Performance Features
-
-- **Zero dependencies** - No heavy frameworks or libraries
-- **Lightweight** - Fast load times
-- **Optimized** - Minimal DOM manipulation
-- **Smooth animations** - Hardware-accelerated CSS transitions
+Or simply visit the live deployment: **[mangoo-two.vercel.app](https://mangoo-two.vercel.app)**
 
 ---
 
-## 🔮 Future Enhancements
+## 🎨 Colour Palette
+
+| Role        | Hex       | Preview |
+|-------------|-----------|---------|
+| Background  | `#F2E1BF` | Warm cream |
+| Primary     | `#253A5A` | Deep navy |
+| Accent      | `#AFC3B4` | Sage green |
+| Highlight   | `#FFD700` | Sunset gold |
+| Cards       | `#111111` | Rich black |
+
+---
+
+## 🧩 Customisation
+
+### Update your timetable
+Edit `timetable-data.js` to add or modify roll-number entries with their corresponding schedules.
+
+### Change the mess menu
+Open `mess.js` and update the `menuData` array with your mess's weekly meals.
+
+### Edit bus timings
+Open `bus.js` and modify the `buses` array:
+```js
+{ bus: "Bus 01", time: "08:00", from: "Aryabhatta", to: "Tut Block" }
+```
+
+### Add study resource links
+In `index.html`, find the `<nav>` inside `.sidebar-content` and add `<li><a href="...">Subject</a></li>` entries.
+
+---
+
+## 🔭 Roadmap
 
 - [ ] Dark mode toggle
-- [ ] Export timetable as PDF
+- [ ] Mobile PWA / offline support
 - [ ] Notifications for upcoming classes
-- [ ] Mobile app version
-- [ ] Custom timetable editor
-- [ ] Integration with campus WiFi for auto-detection
-- [ ] Assignment tracker
+- [ ] Assignment & deadline tracker
 - [ ] Grade calculator
-
----
-
-## 📱 Screenshots
-
-### Main Timetable
-*Clean, organized view of your weekly schedule*
-
-### Bus Schedule
-*Never miss the bus again with real-time next bus highlighting*
-
-### Mess Menu
-*Know what's for dinner before you head to the mess*
+- [ ] Export timetable to PDF
+- [ ] Exam room checker (partially built — `exam.html`)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to:
+Contributions are welcome! IIT Patna students especially — if your timetable data is missing or the bus timings have changed, open a PR.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+```bash
+# 1. Fork the repo & create a branch
+git checkout -b feature/your-feature-name
 
----
+# 2. Make your changes, then commit
+git commit -m "feat: describe your change"
 
-## 📝 Customization Guide
-
-### Adding Your Own Timetable
-
-Edit `index.html` and modify the timetable cards:
-
-```html
-<div class="timetable-card schedule-content" data-day="1">
-  <div class="timetable-header">
-    <span class="day">MONDAY</span>
-    <span class="tag">WEEKDAY</span>
-  </div>
-  <div class="row">
-    <span class="time">9 AM - 10 AM</span>
-    <span class="code">YOUR SUBJECT</span>
-    <span class="venue">YOUR VENUE</span>
-  </div>
-  <!-- Add more rows -->
-</div>
+# 3. Push and open a Pull Request
+git push origin feature/your-feature-name
 ```
-
-### Updating Bus Schedule
-
-Edit the `buses` array in `bus.js`:
-
-```javascript
-{
-  "bus": "Bus 01",
-  "time": "08:00",
-  "from": "Starting Point",
-  "to": "Destination"
-}
-```
-
-### Modifying Mess Menu
-
-Update the `menuData` array in `mess.js` with your mess menu items.
-
----
-
-## 🐛 Known Issues
-
-- Background images require local file paths (update with your images)
-- Custom font files need to be present in `/images` directory
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 💡 Inspiration
-
-Built with 💙 for students, by students at **IIT Patna**
-
-*Because organizing student life shouldn't be complicated.*
-
----
-
-## 📬 Contact
-
-Have suggestions or found a bug? Feel free to reach out!
-
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+Open source under the [MIT License](LICENSE).
 
 ---
 
 <div align="center">
 
-### ⭐ Star this repo if you found it helpful!
+Built with ☕ and late-night coding sessions at **IIT Patna**
 
-**Made with ☕ and late-night coding sessions**
+*Because organising student life shouldn't be complicated.*
+
+⭐ Star this repo if it saved you from missing the bus!
 
 </div>
