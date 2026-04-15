@@ -29,6 +29,38 @@ function closeSidebar() {
 
 sidebar.querySelectorAll('a').forEach(link => link.addEventListener('click', closeSidebar));
 
+// ==================== DROPDOWN MENU LOGIC ====================
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+dropdownToggles.forEach(toggle => {
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const dropdownItem = this.parentElement;
+    const dropdownMenu = dropdownItem.querySelector('.dropdown-menu');
+    
+    // Close other menus
+    document.querySelectorAll('.dropdown-menu.active').forEach(menu => {
+      if (menu !== dropdownMenu) {
+        menu.classList.remove('active');
+      }
+    });
+    
+    // Toggle current menu
+    dropdownMenu.classList.toggle('active');
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.dropdown-item')) {
+    document.querySelectorAll('.dropdown-menu.active').forEach(menu => {
+      menu.classList.remove('active');
+    });
+  }
+});
+
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const DAY_LABELS = {

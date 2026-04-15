@@ -2,49 +2,49 @@ const menuData = [
   {
     Day: "Monday",
     Breakfast: "Aloo Paratha + Green Chutney + Tomato Sauce + Curd",
-    Lunch: "Sev Tamatar Sabji + Chana Dal + Plain Rice + Fryums + Roti",
+    Lunch: "Cabbage Aloo Matar + Rajma + Plain Rice + Fryums + Roti + Roofaaza",
     Snacks: "Samosa + Chutney + Tea",
-    Dinner: "Paneer Tikka Masala / Butter Chicken + Dal Fry + Plain Rice + Roti",
+    Dinner: "Paneer Tikka Masala + Butter Chicken + Dal Fry + Plain Rice + Roti",
     Dessert: "Custard"
   },
   {
     Day: "Tuesday",
-    Breakfast: "Poori + Aloo Dry + Jalebi + Egg Bhurji",
-    Lunch: "Seasonal Sabji + Pyaz Pakoda + Chana Dal + Jeera Rice + Papad + Roti",
-    Snacks: "Peri Peri Fries + Coffee",
-    Dinner: "Gatte ki Sabji + Chana Dal + Tomato Rice + Roti + Fryums",
+    Breakfast: "Poha + Jalebi // Poori + Aloo Curry + Egg Bhurji",
+    Lunch: "Seasonal Sabji + Pyaz Ke Pakorde + Chana Dal + Jeera Rice + Papad + Roti + Curd",
+    Snacks: "Peri Peri French Fries + Coffee",
+    Dinner: "Dum Aloo + Daal Tadka + Fried Rice + Roti",
     Dessert: "Gulab Jamun"
   },
   {
     Day: "Wednesday",
-    Breakfast: "Masala Upma + Chutney + Sambar + Sprouts Chaat",
-    Lunch: "Kadhi + Mix Dal + Rice + Aloo Bhujia + Fryums + Roti",
-    Snacks: "Pyaaz Kachori + Tea",
-    Dinner: "Paneer Lababdar / Kolhapuri Chicken / Chilli Chicken + Jeera Rice + Roti + Dal",
+    Breakfast: "Pav Bhaji with Onion + Sprouts Chaat",
+    Lunch: "Kadhi + Mix Dal + Plain Rice + Aloo Bhujiya + Fryums + Roti + Bhuni Mirch + Banarsi Lassi",
+    Snacks: "Pyaaz Ki Kachori + Tea",
+    Dinner: "Paneer Lababdar + (3 time Kolhapuri Chicken / 2 time Chilly Chicken) + Jeera Rice + Roti + Dal",
     Dessert: ""
   },
   {
     Day: "Thursday",
-    Breakfast: "Mix Veg Paratha + Red & Green Chutney",
-    Lunch: "Chole + Methi Matar Malai + Papad + Rice + Roti",
-    Snacks: "Spring Roll + Coffee",
+    Breakfast: "Mix Veg Paratha + Red and Green Chutney",
+    Lunch: "Chole + Methi Matar Malai + Papad + Plain Rice + Roti + Shikanji",
+    Snacks: "Maggi + Coffee",
     Dinner: "Dry Manchurian + Aloo Soyabean + Dal Tadka + Roti + Fried Rice",
     Dessert: "Rabdi Jalebi"
   },
   {
     Day: "Friday",
-    Breakfast: "Vada + Uttapam + Masala Idli + Sambar & Chutney",
-    Lunch: "Dum Aloo + Dal Tadka + Fried Rice + Roti + Fryums",
+    Breakfast: "Vada + (Uttapam / Masala Idli) + Sambar & Chutney",
+    Lunch: "Mix Veg + Masoor Dal + Plain Rice + Roti + Curd",
     Snacks: "Bread Pakoda + Tea",
-    Dinner: "Butter Paneer Masala / Hyderabadi Chicken / Kadhai Chicken + Rice + Roti + Dal",
+    Dinner: "Butter Paneer Masala + Dal + {Hyderabadi Chicken / Kadhai Chicken} + Plain Rice + Roti",
     Dessert: "Ras Malai"
   },
   {
     Day: "Saturday",
-    Breakfast: "Sandwich + Chutney + Ketchup + Sprouts Chaat",
-    Lunch: "Lauki Chana + Rajma + Rice + Roti + Papad",
+    Breakfast: "Sandwich + Green Chutney + Ketchup + Sprout Chaat",
+    Lunch: "Lauki Chana + Lehsun Ki Chutney + Rajma + Plain Rice + Roti + Papad + Butter Milk",
     Snacks: "Golgappe + Coffee",
-    Dinner: "Malai Kofta + Egg Curry + Rice + Roti + Dal",
+    Dinner: "Malai Kofta + Egg Curry + Plain Rice + Roti + Dal",
     Dessert: "Shahi Tukda / Balushahi"
   },
   {
@@ -57,7 +57,7 @@ const menuData = [
   },
   {
     Day: "Everyday",
-    Breakfast: "Milk + Bread + Butter + Jam + Tea + Cornflakes + Egg + Fruits",
+    Breakfast: "Milk with Coco Powder + Bread + Butter + Jam + Tea + Corn Flakes + Egg + (3 times Banana / 2 time Papaya / 2 time Watermelon)",
     Lunch: "Salad + Pickle",
     Snacks: "Toast",
     Dinner: "Salad + Pickle",
