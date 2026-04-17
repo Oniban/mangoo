@@ -9,7 +9,7 @@ const examData = {
   MA1201: { date: "04-05-2026", day: "Monday",    shift: "Morning (09:30 AM – 12:30 PM)", name: "Mathematics" },
   IK1201: { date: "30-04-2026", day: "Thursday",  shift: "Morning (09:30 AM – 12:30 PM)", name: "Indian Knowledge System" },
   PH1201: { date: "05-05-2026", day: "Tuesday",   shift: "Morning (09:30 AM – 12:30 PM)", name: "Physics" },
-  EE1201: { date: "01-05-2026", day: "Friday",    shift: "Morning (09:30 AM – 12:30 PM)", name: "Electrical" },
+  EE1201: { date: "28-04-2026", day: "Friday",    shift: "Morning (09:30 AM – 12:30 PM)", name: "Electrical" },
   CE1201: { date: "07-05-2026", day: "Thursday",  shift: "Morning (09:30 AM – 12:30 PM)", name: "Engineering Drawing" },
 };
 
