@@ -28,30 +28,25 @@
       transform: scale(1.06);
       color: #FFD700;
     }
-    h1 {
+    .bus-header h1 {
       padding-top: 60px;
     }
   </style>
 </head>
-
 <body>
 
   <a href="index.html" class="back-btn">← Home</a>
 
-  <h1>Bus Schedule</h1>
-
-<div class="content-wrapper">
-
-  <div class="top-action-btn">
-    <a href="https://docs.google.com/spreadsheets/d/1p0WTx2O5rUEatdvpVtoQwnPEhv86_nZf5F-LMPwEe_s/edit?gid=0#gid=0" target="_blank">
-      🔗 Open Link
-    </a>
+  <div class="bus-header">
+    <h1>Bus Schedule</h1>
   </div>
-
-  <div id="busContainer"></div>
-
-</div>
+  <div id="lastUpdated"></div>
+  <div style="text-align: center; margin-bottom: 18px;">
+    <button id="refreshBtn" onclick="loadBusData()">↻ Refresh</button>
+  </div>
+  <div id="busContainer" class="content-wrapper"></div>
 
   <script src="features/bus.js"></script>
+
 </body>
 </html>
