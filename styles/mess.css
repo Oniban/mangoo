@@ -11,8 +11,11 @@ h1 {
 }
 
 .menu-container {
-  width: 800px;
+  max-width: 800px;   /* was: width: 800px — fixed px caused mobile zoom-out */
+  width: 100%;
   margin: 40px auto;
+  padding: 0 12px;    /* breathing room on small screens */
+  box-sizing: border-box;
 }
 
 /* ─── Menu Day Card ───────────────────────────────────────── */
@@ -35,11 +38,11 @@ h1 {
   inset: 0;
   background: linear-gradient(
     135deg,
-    #3b4454 0%,     /* dark bluish grey */
-    #4f5d73 25%,    /* muted blue */
-    #5f7f96 50%,    /* soft blue */
-    #5fa6a1 75%,    /* teal */
-    #7ec8a3 100%    /* greenish */
+    #3b4454 0%,
+    #4f5d73 25%,
+    #5f7f96 50%,
+    #5fa6a1 75%,
+    #7ec8a3 100%
   );
   filter: blur(4px);
   z-index: 0;
@@ -112,4 +115,27 @@ h1 {
   text-align: right;
   font-family: 'coolfont';
   text-shadow: 0 1px 2px rgba(0,0,0,1.5);
+}
+
+/* ─── Mobile fixes ───────────────────────────────── */
+
+@media (max-width: 600px) {
+  .menu-header {
+    font-size: 1em;
+    padding: 14px;
+  }
+
+  .meal-section {
+    grid-template-columns: 110px 1fr;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .meal-title {
+    font-size: 0.9em;
+  }
+
+  .meal-items {
+    font-size: 0.82em;
+  }
 }
