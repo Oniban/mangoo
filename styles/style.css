@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'coolfont';
-    src: url(images/GravitasOne-Regular.ttf);
+    src: url('../assets/GravitasOne-Regular.ttf');
 }
 body {
   background: linear-gradient(
