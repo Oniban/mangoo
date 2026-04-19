@@ -139,3 +139,40 @@ h1 {
     font-size: 0.82em;
   }
 }
+.back-btn {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 1200;
+  background: linear-gradient(135deg, #3b4454 0%, #4f5d73 25%);
+  color: #ddaf54;
+  font-family: 'coolfont', system-ui;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, background 0.2s ease;
+  border: 1px solid rgba(221, 175, 84, 0.25);
+}
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.06);
+  color: #FFD700;
+}
+h1 {
+  padding-top: 60px;
+}
+
+.rebate-btn{
+  display: block;
+  text-align: center;
+}
+
+.Mess-Rebate{
+  display: block;
+  text-align: center;
+  font-family: 'coolfont', system-ui;
+  color: #c0ddf1;
+  
+}
