@@ -1416,7 +1416,7 @@ const GROUP_TIMETABLE = {
     {time:"4:00 PM - 4:55 PM",course:"MA1201",venue:"CLH: LT003",type:"LECTURE"}
   ],
   Tuesday: [
-    {time:"8:00 AM - 8:55 AM",course:"PH1201",venue:"Block 9, Room 309",type:"TUTORIAL"},
+    {time:"8:00 AM - 8:55 AM",course:"PH1201",venue:"Block 9, Room 502",type:"TUTORIAL"},
     {time:"11:00 AM - 11:55 AM",course:"EE1201",venue:"CLH: LT103",type:"LECTURE"},
     {time:"2:00 PM - 2:55 PM",course:"CE1201",venue:"CLH: LT003",type:"LECTURE"},
     {time:"5:00 PM - 5:55 PM",course:"CS1201",venue:"CLH: LT103",type:"LECTURE"}
