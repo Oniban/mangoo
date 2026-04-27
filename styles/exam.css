@@ -280,3 +280,169 @@ body {
       margin-left: 8px;
       letter-spacing: 1px;
     }
+
+    /* ── Mobile Responsive ── */
+    @media (max-width: 600px) {
+      body {
+        padding: 16px 14px 80px;
+      }
+
+      h1 {
+        font-size: 1.7em;
+        margin: 20px 0 8px;
+      }
+
+      .subtitle {
+        font-size: 0.85em;
+        margin-bottom: 28px;
+        letter-spacing: 1px;
+      }
+
+      /* Stack search box vertically on very small screens */
+      .search-wrapper {
+        max-width: 100%;
+        margin-bottom: 32px;
+        gap: 10px;
+      }
+
+      .search-box {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #rollInput {
+        padding: 14px 16px;
+        font-size: 1em;
+        border-radius: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      #searchBtn {
+        padding: 14px 20px;
+        font-size: 1em;
+        border-radius: 10px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Results */
+      #results {
+        max-width: 100%;
+      }
+
+      .result-roll {
+        font-size: 1.2em;
+        letter-spacing: 2px;
+      }
+
+      .result-count {
+        font-size: 0.8em;
+      }
+
+      /* Exam card — switch to single column */
+      .exam-card {
+        border-radius: 14px;
+        margin-bottom: 16px;
+      }
+
+      .exam-card-header {
+        padding: 14px 16px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .exam-date {
+        font-size: 0.95em;
+      }
+
+      .session-tag {
+        font-size: 0.75em;
+        padding: 5px 12px;
+      }
+
+      .exam-body {
+        grid-template-columns: 1fr;   /* single column on mobile */
+      }
+
+      /* Re-apply borders correctly for single column */
+      .exam-field {
+        padding: 14px 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-right: none !important;
+      }
+
+      /* Remove bottom border only from the last field */
+      .exam-field:last-child {
+        border-bottom: none;
+      }
+
+      /* Restore bottom border on fields that were previously
+         exempt only because they were in the last *row* of 2 */
+      .exam-field:nth-last-child(-n+2) {
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .field-label {
+        font-size: 0.65em;
+        margin-bottom: 4px;
+      }
+
+      .field-value {
+        font-size: 1em;
+      }
+
+      .dow {
+        font-size: 0.68em;
+        margin-left: 6px;
+      }
+
+      .today-pill {
+        font-size: 0.7em;
+        padding: 3px 10px;
+        margin-left: 6px;
+      }
+
+      .error-box {
+        padding: 36px 16px;
+      }
+
+      .error-emoji {
+        font-size: 2.4em;
+      }
+
+      .error-msg {
+        font-size: 1em;
+      }
+
+      .error-sub {
+        font-size: 0.8em;
+      }
+    }
+
+    /* ── Tablet tweaks (601px – 768px) ── */
+    @media (min-width: 601px) and (max-width: 768px) {
+      body {
+        padding: 18px 24px 70px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .search-wrapper {
+        max-width: 100%;
+      }
+
+      #results {
+        max-width: 100%;
+      }
+
+      .exam-card-header {
+        padding: 16px 18px;
+      }
+
+      .exam-field {
+        padding: 14px 18px;
+      }
+    }
