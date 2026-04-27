@@ -1,0 +1,282 @@
+body {
+      min-height: 100vh;
+      padding: 20px 20px 60px;
+      background-color: #848FAF;
+    }
+
+    h1 {
+      margin: 30px 0 10px;
+      font-size: 2.5em;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #1E3A5F;
+      font-family: 'coolfont';
+      font-size: 1em;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+    }
+
+    /* ── Search box ── */
+    .search-wrapper {
+      max-width: 520px;
+      margin: 0 auto 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .search-box {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+    }
+
+    #rollInput {
+      flex: 1;
+      padding: 16px 20px;
+      font-size: 1.1em;
+      font-family: 'coolfont';
+      border: 2px solid #AFC3B4;
+      border-radius: 12px;
+      background: #99ADA1;
+      color: #555;
+      outline: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: box-shadow 0.3s;
+    }
+
+    #rollInput::placeholder {
+      color: #555;
+      text-transform: none;
+    }
+
+    #rollInput:focus {
+      box-shadow: 0 0 20px rgba(175,195,180,0.5);
+    }
+
+    #searchBtn {
+      padding: 16px 26px;
+      font-family: 'coolfont';
+      font-size: 1em;
+      background: #536391;
+      color: #1E3A5F;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+
+    #searchBtn:hover {
+      background: #AFC3B4;
+      transform: scale(1.04);
+      box-shadow: 0 0 20px rgba(175,195,180,0.6);
+    }
+
+    .hint {
+      font-family: 'coolfont';
+      font-size: 0.8em;
+      color: #7BAAA1;
+      letter-spacing: 1px;
+    }
+
+    /* ── Results ── */
+    #results {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .result-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .result-roll {
+      font-family: 'coolfont';
+      font-size: 1.5em;
+      color: #1E3A5F;
+      letter-spacing: 3px;
+    }
+
+    .result-count {
+      font-family: 'coolfont';
+      color: #1E3A5F;
+      font-size: 0.85em;
+      margin-top: 6px;
+    }
+
+    /* Exam card */
+    .exam-card {
+      background: #111;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      position: relative;
+      animation: slideUp 0.4s ease both;
+    }
+
+    .exam-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+    135deg,
+    #3b4454 0%,     /* dark bluish grey */
+    #4f5d73 25%,    /* muted blue */
+    #5f7f96 50%,    /* soft blue */
+    #5fa6a1 75%,    /* teal */
+    #7ec8a3 100%    /* greenish */
+  );
+      background-size: cover;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .exam-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 22px;
+      border-bottom: 1px solid #222;
+      position: relative;
+      z-index: 1;
+    }
+
+    .exam-date {
+      font-family: 'coolfont';
+      font-size: 1.1em;
+      color: #1E3A5F;
+      font-weight: bold;
+    }
+
+    .session-tag {
+      font-family: 'coolfont';
+      font-size: 0.8em;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+    }
+
+    .session-tag.morning {
+      background: #FFD700;
+      color: #1E3A5F;
+    }
+
+    .session-tag.evening {
+      background: #AFC3B4;
+      color: #1E3A5F;
+    }
+
+    .exam-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .exam-field {
+      padding: 16px 22px;
+      /* border-right: 1px solid #222; */
+      border-bottom: 1px solid #222;
+    }
+
+    .exam-field:nth-child(even) {
+      border-right: none;
+    }
+
+    .exam-field:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+
+    .field-label {
+      font-family: 'coolfont';
+      font-size: 0.7em;
+      color: #1E3A5F;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .field-value {
+      font-family: 'coolfont';
+      font-size: 1.1em;
+      color: #FFD700;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    /* today highlight */
+    .exam-card.today-exam {
+      border: 2px solid #AFC3B4;
+      box-shadow: 0 0 40px rgba(175,195,180,0.6), 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .today-pill {
+      display: inline-block;
+      background: #AFC3B4;
+      color: #1E3A5F;
+      font-family: 'coolfont';
+      font-size: 0.75em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-left: 10px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% { box-shadow: 0 0 10px rgba(175,195,180,0.6); }
+      50%      { box-shadow: 0 0 22px rgba(175,195,180,1); }
+    }
+
+    /* Error / empty states */
+    .error-box {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .error-emoji {
+      font-size: 3em;
+      margin-bottom: 16px;
+    }
+
+    .error-msg {
+      font-family: 'coolfont';
+      font-size: 1.2em;
+      color: #AFC3B4;
+    }
+
+    .error-sub {
+      font-family: 'coolfont';
+      font-size: 0.85em;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    /* Time info */
+    .time-info {
+      font-family: 'coolfont';
+      font-size: 0.75em;
+      color: #555;
+      text-align: center;
+      margin-top: -36px;
+      margin-bottom: 32px;
+    }
+
+    /* day-of-week label */
+    .dow {
+      font-family: 'coolfont';
+      font-size: 0.72em;
+      color: #7BAAA1;
+      margin-left: 8px;
+      letter-spacing: 1px;
+    }
