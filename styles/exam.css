@@ -84,6 +84,14 @@ body {
       letter-spacing: 1px;
     }
 
+    .hint-text {
+      font-family: 'coolfont';
+      font-size: 0.9em;
+      color: #FFD700;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
     /* ── Results ── */
     #results {
       max-width: 700px;
